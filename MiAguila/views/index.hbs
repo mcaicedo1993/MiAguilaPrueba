@@ -1,0 +1,38 @@
+﻿
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <select id="city_selector">
+                    <option value="Bogotá" selected>Bogotá</option>
+                    <option value="Medellin" selected>Medellin</option>
+                    <option value="Barranquilla" selected>Barranquilla</option>
+                    <option value="Cali" selected>Cali</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <select id="status_selector">
+                    <option value="started" selected>started</option>
+                    <option value="near" selected>near</option>
+                    <option value="onWay" selected>onWay</option>
+                </select>
+            </div>
+        </div>
+        <input type="button" id="btnLoad" onclick="methods.loadInfo();" value="Cargar" />
+        <div id="grid"></div>
+        <div id="map"></div>
+    </div>
+</div>
+<style>
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+</style>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKGMv9RsQRjJpbd-Zs_8d8_2qJY23LzvA&callback=methods.initMap"></script>
+<script src="javascripts/select/js/standalone/selectize.min.js"></script>
+<script src="javascripts/client.js"></script>
+
